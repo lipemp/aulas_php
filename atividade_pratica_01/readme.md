@@ -1,9 +1,11 @@
+# Atividade Prática 01 - PHP
+
 ## Configuração de um projeto
 
 Crie um documento PHP, conforme foi feito em aula com o mentor. 
 Faça a publicação deste projeto no seu GitHub e utilize para a resolução dos exercícios de fixação.
 
-# Exercícios de fixação
+## Exercícios de fixação
 
 Usando o php, realize os seguintes exercícios:
 
