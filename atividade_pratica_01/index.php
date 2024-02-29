@@ -1,10 +1,10 @@
 <?php
     // Exercício 01
-    echo 'Exercício 01<br />';
+    echo '<h2> Exercício 01 </h2>';
     $resultado = array();
 
-    $num1 = 1;
-    $num2 = 10;
+    $num1 = 7;
+    $num2 = 8;
 
     function calcularMedia($num1, $num2) {
         global $resultado;
@@ -18,16 +18,16 @@
 
         array_push($resultado, array(
             'media' => $media,
-            'resumo' => $aprovado
+            'aprovado?' => $aprovado
         ));
     }
     calcularMedia($num1, $num2);
     var_dump($resultado);
 
-    echo "<br/><br/>";
+    echo "<br/><br/><br/>";
 
     // Exercício 02
-    echo '<br /> Exercício 02 <br />';
+    echo '<h2> Exercício 02 </h2>';
 
     $notaPeso = array(
         [
@@ -67,10 +67,9 @@
     calcularPesoNota($notaPeso);
     echo $mediaFinal;
 
-    echo "<br/><br/>";
-
+    echo "<br/><br/><br/>";
     // Exercício 03
-    echo ' <br /> Exercício 03';
+    echo '<h2> Exercício 03 </h2>';
 
     $listaProdutos = array();
 
@@ -87,9 +86,9 @@
         global $listaProdutos;
 
         foreach ($listaProdutos as $key => $value) {
-            echo "<h4> Nome:" . $value['nome'] . "</h4>";
-            echo "<h4> Preço: R$" . $value['preco'] . "</h4>";
-            echo "<hr />";
+            echo "<h5> Nome:" . $value['nome'] . "</h5>";
+            echo "<h5> Preço: R$" . $value['preco'] . "</h5>";
+            echo "<hr/>";
         }
     }
 
@@ -108,7 +107,7 @@
     cadastrarProduto("Refri 3L", 12);
     
     listarProdutos();
-    echo "<br /> Excluindo produtos <br />";
+    echo "<h3> Excluindo produtos </h3>";
     excluirProduto('Maçã');
     listarProdutos()
 ?>
