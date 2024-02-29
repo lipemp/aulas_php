@@ -48,20 +48,16 @@
 
     function calcularPesoNota($lista) {
         global $mediaFinal;
-        // Pegamos a média final que é global
+
         $multiplicacao = 0;
-        // Criamos uma variavel para armazenar o resultado
-        // das multiplicações
 
         foreach ($lista as $key => $value) {
             $multiplicacao += $value['nota'] * $value['peso'];
-            // Utilizamos forEach que coleta a nota e peso e os multiplica
-            // somando com o que já estiver em multiplicação ('+=')
+
         }
 
         return $mediaFinal = $multiplicacao / count($lista);
-        // Retornamos para a mediaFinal o resultado da soma de todas multiplicações
-        // divididas pelo total de elementos na lista
+
     }
 
     calcularPesoNota($notaPeso);
@@ -102,12 +98,12 @@
         }
     }
 
-    cadastrarProduto("Maçã", 3);
-    cadastrarProduto("Pêra", 5);
-    cadastrarProduto("Refri 3L", 12);
+    cadastrarProduto("Banana", 3);
+    cadastrarProduto("Abacaxi", 5);
+    cadastrarProduto("Laranja", 12);
     
     listarProdutos();
     echo "<h3> Excluindo produtos </h3>";
-    excluirProduto('Maçã');
+    excluirProduto('Abacaxi');
     listarProdutos()
 ?>
