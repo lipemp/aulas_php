@@ -96,7 +96,7 @@ $meuFusca->andar(100);
 $meuFusca->obterGasolina();
 
 
-## Resultados
+<!-- ## Resultados -->
 
 <!-- ![exercicio01e02](https://github.com/lipemp/aulas_php/blob/main/atividade_pratica_01/images/exercicios01e02.jpg)
 ![exercicio03](https://github.com/lipemp/aulas_php/blob/main/atividade_pratica_01/images/exercicio03.jpg) -->
