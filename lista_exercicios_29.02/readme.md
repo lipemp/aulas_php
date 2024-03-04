@@ -17,12 +17,13 @@ A classe deve oferecer métodos que devem:
 
 2. Crie uma classe que modele uma bola:  
     a. Atributos  
-        i. Cor  
-        ii. Circunferência  
-        iii. Material  
+    i. Cor  
+    ii. Circunferência  
+    iii. Material
+  
     b. Métodos  
-        i. Trocar Cor  
-        ii. Mostrar cor  
+    i. Trocar Cor  
+    ii. Mostrar cor  
 
 
 3. Crie uma classe para implementar uma conta corrente.  
@@ -35,6 +36,7 @@ A classe deve possuir os seguintes atributos:
     a. Alterar nome  
     b. Deposito  
     c. Saque  
+  
 No construtor, o saldo é opcional, com valor padrão zero e os
 demais atributos são obrigatórios. A conta não pode ficar com saldo
 negativo.
