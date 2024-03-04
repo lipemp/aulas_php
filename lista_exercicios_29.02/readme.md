@@ -25,10 +25,12 @@ devem:
         ii. Mostrar cor  
 
 
-3. Crie uma classe para implementar uma conta corrente. A classe deve possuir os seguintes atributos:  
+3. Crie uma classe para implementar uma conta corrente.  
+A classe deve possuir os seguintes atributos:  
     a. Número da conta  
     b. Nome do correntista  
     c. Saldo  
+     
 Os métodos são os seguintes:  
         a) Alterar nome  
     b) Deposito  
@@ -47,12 +49,13 @@ dividir e diminuir.
     c. Esta classe deve conter uma ação para visualizar o histórico.  
 
 
-5. Faça um programa completo utilizando classes e métodos que:
+5. Faça um programa completo utilizando classes e métodos que:  
     a. Possua uma classe chamada BombaCombustivel, com no
 mínimo esses atributos:  
         i. tipoCombustivel.  
         ii. valorLitro  
         iii. quantidadeCombustivel  
+  
     b. Possua no mínimo esses métodos:  
         i. abastecerPorValor() – método onde é informado o
 valor a ser abastecido e mostra a quantidade de litros
