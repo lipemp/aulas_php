@@ -9,10 +9,10 @@ Faça a publicação deste projeto no seu GitHub e utilize para a resolução do
 
 1. Crie uma classe Contador, que encapsule um valor usado para
 contagem de itens ou eventos. A classe deve oferecer métodos que
-devem:
-    a) Zerar;
-    b) Incrementar;
-    c) Retornar o valor do contador.
+devem:  
+    a) Zerar;  
+    b) Incrementar;  
+    c) Retornar o valor do contador.  
 
 
 2. Crie uma classe que modele uma bola:
