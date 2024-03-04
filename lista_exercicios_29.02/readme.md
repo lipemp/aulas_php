@@ -8,11 +8,11 @@ Faça a publicação deste projeto no seu GitHub e utilize para a resolução do
 ## Exercícios de fixação
 
 1. Crie uma classe Contador, que encapsule um valor usado para
-contagem de itens ou eventos. A classe deve oferecer métodos que
-devem:  
-    a) Zerar;  
-    b) Incrementar;  
-    c) Retornar o valor do contador.  
+contagem de itens ou eventos.  
+A classe deve oferecer métodos que devem:  
+    a. Zerar;  
+    b. Incrementar;  
+    c. Retornar o valor do contador.  
 
 
 2. Crie uma classe que modele uma bola:  
@@ -30,11 +30,11 @@ A classe deve possuir os seguintes atributos:
     a. Número da conta  
     b. Nome do correntista  
     c. Saldo  
-     
+  
 Os métodos são os seguintes:  
-        a) Alterar nome  
-    b) Deposito  
-    c) Saque  
+    a. Alterar nome  
+    b. Deposito  
+    c. Saque  
 No construtor, o saldo é opcional, com valor padrão zero e os
 demais atributos são obrigatórios. A conta não pode ficar com saldo
 negativo.
