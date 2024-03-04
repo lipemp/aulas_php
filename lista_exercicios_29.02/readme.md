@@ -31,7 +31,7 @@ A classe deve possuir os seguintes atributos:
     b. Nome do correntista  
     c. Saldo  
   
-Os métodos são os seguintes:  
+    Os métodos são os seguintes:  
     a. Alterar nome  
     b. Deposito  
     c. Saque  
