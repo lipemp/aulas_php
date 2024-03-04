@@ -25,13 +25,12 @@ devem:
         ii. Mostrar cor  
 
 
-3. Crie uma classe para implementar uma conta corrente. A classe  
-deve possuir os seguintes atributos:  
+3. Crie uma classe para implementar uma conta corrente. A classe deve possuir os seguintes atributos:  
     a. Número da conta  
     b. Nome do correntista  
     c. Saldo  
 Os métodos são os seguintes:  
-    a) Alterar nome  
+        a) Alterar nome  
     b) Deposito  
     c) Saque  
 No construtor, o saldo é opcional, com valor padrão zero e os
@@ -86,7 +85,7 @@ de combustível e forneça um método adicionarGasolina(),
 para abastecer o tanque.  
 
 Exemplo:  
-// Criando uma instância de Carro
+// Criando uma instância de Carro  
 $meuFusca = new Carro(15);  
 // Adicionando gasolina  
 $meuFusca->adicionarGasolina(20);  
