@@ -1,22 +1,17 @@
-<?php 
+<?php
+require_once('./conta.php');
+require_once('./conta-kids.php');
+require_once('./user.php');
+require_once('./funcionario.php');
 
-require('./animal.php');
-require('./cachorro.php');
 
-$animal = new Animal("carnívoro", "dinossauro", false);
-$animal2 = new Animal("herbívoro", "ave", true);
+$user1 = new User("123123", "teste@teste.com");
 
-echo $animal->tipo;
-echo "<br/>";
-echo var_dump($animal->voa);
-echo "<br/>";
-echo $animal->especie;
-echo "<br/>";
+$funcionario1 = new Funcionario("Pedro","0001", "pedro@teste.com", "123123" );
 
-$animal->voar();
+$funcionario1->alterarSenhaFuncionario("55555");
 
-$animal2->voar();
+var_dump($funcionario1);
 
-// $nomeDoCachorro = new Cachorro("nomeDoCachorro");
 
-echo  $nomeDoCachorro->mostrarDetalhe();
+
