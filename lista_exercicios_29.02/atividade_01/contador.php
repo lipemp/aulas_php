@@ -11,11 +11,11 @@ class Contador {
 
     public function incrementar() {
         $this -> contador += 1;
-        echo 'O valor foi incrementado!';
+        echo 'O valor foi incrementado! </br>';
     } 
 
     public function valorContador() {
-        echo "Valor do contador é: $this->contador";
+        echo "</br> Valor do contador é: $this->contador";
     }
 
 }
