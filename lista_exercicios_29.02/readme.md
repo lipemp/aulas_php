@@ -14,6 +14,7 @@ A classe deve oferecer métodos que devem:
     b. Incrementar;  
     c. Retornar o valor do contador.  
 
+---
 
 2. Crie uma classe que modele uma bola:  
     a. Atributos  
@@ -25,6 +26,7 @@ A classe deve oferecer métodos que devem:
     i. Trocar Cor  
     ii. Mostrar cor  
 
+---
 
 3. Crie uma classe para implementar uma conta corrente.  
 A classe deve possuir os seguintes atributos:  
@@ -41,6 +43,7 @@ No construtor, o saldo é opcional, com valor padrão zero e os
 demais atributos são obrigatórios. A conta não pode ficar com saldo
 negativo.
 
+---
 
 4. Crie uma classe para representar uma Calculadora. Esta classe
 deve conter um atributo que servirá para armazenar o histórico das
@@ -50,6 +53,7 @@ dividir e diminuir.
     b. Esta classe deve iniciar com o histórico vazio.  
     c. Esta classe deve conter uma ação para visualizar o histórico.  
 
+---
 
 5. Faça um programa completo utilizando classes e métodos que:  
     a. Possua uma classe chamada BombaCombustivel, com no
@@ -74,6 +78,7 @@ OBS: Sempre que acontecer um abastecimento é necessário
 atualizar a quantidade de combustível total na bomba. Não deve ser
 possível abastecer se não tiver gasolina suficiente na bomba.  
 
+---
 
 6. Implemente uma classe chamada Carro com as seguintes
 propriedades:  
