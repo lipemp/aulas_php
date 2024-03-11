@@ -30,6 +30,7 @@ em reais e um método imprimeValor():
 ---
 
 3. Dado o seguinte diagrama:  
+
     ![exercicio03](https://github.com/lipemp/aulas_php/blob/main/lista_pilares_poo/questao_03.jpg)
   
 Identifique os atributos e comportamentos que são comuns entre os
