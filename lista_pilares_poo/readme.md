@@ -1,4 +1,4 @@
-# Atividade Modelagem de Classes
+# Atividade Pilares POO
 
 ## Configuração de um projeto
 
