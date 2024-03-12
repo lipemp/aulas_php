@@ -1,27 +1,28 @@
 <?php
 require_once('./utils/next_id.php');
 
-class User
+class Product
 {
     private $id;
     private $name;
-    private $email;
-    private $password;
-    private $active;
+    private $description;
+    private $price;
+    private $available;
+    private $score;
 
-    public function __construct($nameP, $emailP, $passwordP, $active = true)
+    public function __construct($nameP, $descriptionP, $priceP, $available = true)
     {
         $this->id = createId();
         $this->name = $nameP;
-        $this->email = $emailP;
-        $this->password = $passwordP;
-        $this->active = $active;
+        $this->description = $descriptionP;
+        $this->price = $priceP;
+        $this->available = $available;
     }
 
-    public function add($userData)
+    public function add($productData)
     {
-        array_push($userData, $this);
-        return $userData;
+        array_push($productData, $this);
+        return $productData;
     }
 
     public function getId(){
@@ -31,9 +32,9 @@ class User
     {
     }
 
-    public static function show($idP, $userData)
+    public static function show($idP, $productData)
     {
-        $filtered = array_values(array_filter($userData, function ($item) use ($idP) {
+        $filtered = array_values(array_filter($productData, function ($item) use ($idP) {
             return $item->id == $idP; 
         })
     );
@@ -43,11 +44,12 @@ class User
                 
         if ($filtered) {
             echo "Nome: " . $filtered[0]->name . "<br>";
-            echo "E-mail: " . $filtered[0]->email . "<br>";
-            echo $filtered[0]->active ? "Status: Ativo!" : "Status: Inativo!" . "<br>";
+            echo "Descrição " . $filtered[0]->description . "<br>";
+            echo "Preço: " . $filtered[0]->price . "<br>";
+            echo $filtered[0]->available ? "Status: Disponível!" : "Status: Indisponível!" . "<br>";
             echo "<br><hr>";
         } else {
-            echo "Usuário não encontrado.";
+            echo "Produto não encontrado.";
         }
     }
 
@@ -57,7 +59,7 @@ class User
 
     public static function list($userData)
     {
-        echo "Lista de usuários<br><hr>";
+        echo "Lista de produtos:<br><hr>";
         foreach ($userData as $value) {
             echo "Nome: " . $value->name . "<br>";
             echo "E-mail: " . $value->email . "<br>";
