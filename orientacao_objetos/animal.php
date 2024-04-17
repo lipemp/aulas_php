@@ -42,7 +42,7 @@ abstract class Animal {
 
     }
 
-    abstract public function falar();
+    abstract public function latir();
 
 
 }
