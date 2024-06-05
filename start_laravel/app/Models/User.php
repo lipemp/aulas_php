@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\DB;
 use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
@@ -42,4 +43,15 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public static function getPostsAmount($userOrder, $userLimit): array
+    {
+        return Post::select('users.name', DB::raw('count(userId) as totalPosts'))
+            ->join('users', 'users.id', '=', 'posts.userId')
+            ->groupBy('users.name')
+            ->orderBy('totalPosts', $userOrder === 'asc' ? 'asc' : 'desc')
+            ->limit($userLimit === 0 ? 10 : $userLimit)
+            ->get()
+            ->toArray();
+    }
 }
