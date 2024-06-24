@@ -11,12 +11,13 @@ class UserController extends Controller
 
     public function index()
     {
-        $user = User::all();
+        $users = User::with('posts')->withCount('posts')->get();
 
-        return response()->json(['success' => 'true', 'msg' => 'Usuários mostrados com sucesso', 'data' => $user]);
+
+        return response()->json(['success' => 'true', 'msg' => 'Usuários mostrados com sucesso', 'data' => $users]);
     }
 
-  
+
     public function store(Request $request)
     {
         try {
@@ -43,12 +44,14 @@ class UserController extends Controller
         }
     }
 
-   
+
     public function show(string $id)
     {
         try {
 
-            return response()->json(['success' => 'true', 'msg' => 'Usuário encontrado com sucesso', 'data' => User::findOrFail($id)]);
+            $user = User::with('profile')->find($id);
+
+            return response()->json(['success' => 'true', 'msg' => 'Usuário encontrado com sucesso', 'data' => $user]);
 
         } catch (\Throwable $th) {
 
@@ -81,7 +84,7 @@ class UserController extends Controller
         }
     }
 
- 
+
     public function destroy(string $id)
     {
         try {

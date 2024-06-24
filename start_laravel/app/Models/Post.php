@@ -12,6 +12,9 @@ class Post extends Model
         'userId',
         'content'
     ];
+
+    protected $with = ['user', 'tags'];
+
     public static function getPostLikes($userOrder, $userLimit): array
     {
         return Like::select('posts.id', 'posts.content', 'users.name', DB::raw('count(postId) as totalLikes'))
@@ -22,5 +25,17 @@ class Post extends Model
             ->limit($userLimit === 0 ? 10 : $userLimit)
             ->get()
             ->toArray();
+    }
+
+    public function user() {
+        return $this->belongsTo(User::class, 'userId');
+    }
+
+    public function likes(){
+        return $this->hasMany(Like::class, 'postId');
+    }
+
+    public function tags() {
+        return $this->belongsToMany(Tag::class);
     }
 }

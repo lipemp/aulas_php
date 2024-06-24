@@ -8,10 +8,14 @@ use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
-   
+
     public function index(Request $request)
     {
-        $posts = Post::all();
+        $limit = $request->query('limit');
+        $page = $request->query('page');
+
+        $posts = Post::with('likes')->with('likes.user')->paginate($limit, ['*'], 'page', $page);
+
         return response()->json(['success' => true, 'data' => $posts]);
     }
 
@@ -32,6 +36,10 @@ class PostController extends Controller
                 "userId" => $user->id,
                 "content" => $request->content
             ]);
+
+            if($request->tags) {
+                $post->tags()->attach($request->tags);
+            }
 
             return response()->json(['success' => true, 'msg' => 'Post cadastrado com sucesso!', 'data' => $post]);
         } catch (\Throwable $th) {
@@ -73,7 +81,7 @@ class PostController extends Controller
             return response()->json(['success' => false, 'msg' => $th->getMessage], 400);
         }
     }
-  
+
     public function destroy(string $id)
     {
         try {

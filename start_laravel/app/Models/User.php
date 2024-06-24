@@ -54,4 +54,17 @@ class User extends Authenticatable
             ->get()
             ->toArray();
     }
+
+    public function posts() {
+        return $this->hasMany(Post::class, 'userId');
+    }
+
+    public function profile() {
+        return $this->hasOne(Profile::class);
+    }
+
+    public function likes() {
+        return $this->hasMany(Like::class, 'userId');
+    }
+
 }
